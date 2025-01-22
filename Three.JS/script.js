@@ -24,8 +24,16 @@ const geometry = new THREE.BoxGeometry(10, 10, 10);
 const cubeColor = new THREE.Color(333);
 const material = new THREE.MeshBasicMaterial({ color: cubeColor });
 const cube = new THREE.Mesh(geometry, material);
-
-
+cube.rotation.x = Math.PI *0.50
+cube.rotation.y = Math.PI *0.25
 scene.add(cube);
 
-renderer.render(scene, camera);
+// Créer une boucle d'animation
+animate();
+
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.05;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+    }

@@ -45,11 +45,11 @@ class Search {
   }
 
   getCities() {
-    fetch("../data/france-cities.json")
-      .then((response) => response.json())
-      .then((data) => {
-        this.cities = data;
-      });
+    fetch('./data/france-cities.json')
+        .then(response => response.json())
+        .then(data => {
+            this.cities = data
+        })
   }
 
   getCityDataWeithFor(cityName) {

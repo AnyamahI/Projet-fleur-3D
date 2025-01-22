@@ -1,4 +1,5 @@
-import { Search } from "./fleur/modules/Search.js";
-
+import { Search } from './modules/Search.js'
+import { Flower } from './modules/Flower.js' 
 // Entrer dans mon rogramme
-new Search();
+new Search()
+new Flower()
