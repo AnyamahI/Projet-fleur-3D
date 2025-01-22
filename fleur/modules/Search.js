@@ -39,6 +39,8 @@ class Search {
       const lat = cityData.lat;
       const lng = cityData.lng;
       new Wind({lat, lng});
+      window.app.city = name;
+      window.app.resetAnimation = true;
     } else {
       alert("ville non trouvée");
     }
